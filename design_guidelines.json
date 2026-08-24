@@ -1,0 +1,123 @@
+{
+  "typography": {
+    "headings": {
+      "font_family": "Manrope, sans-serif",
+      "rationale": "Manrope provides a clean, modern, and authoritative look that fits a forward-looking digital government platform without feeling like a startup.",
+      "weights": ["600", "700", "800"],
+      "tracking": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Public Sans, sans-serif",
+      "rationale": "Public Sans is highly legible, neutral, and designed specifically for civic and government interfaces. It handles data-dense dashboards extremely well.",
+      "weights": ["400", "500"]
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-extrabold tracking-tight text-national-blue",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight text-national-blue",
+      "h3": "text-xl font-semibold text-slate-800",
+      "body": "text-sm text-slate-600 leading-relaxed",
+      "labels": "text-xs font-bold uppercase tracking-widest text-slate-500"
+    }
+  },
+  "colors": {
+    "primary": {
+      "national_blue": "#0A2B4E",
+      "deep_teal": "#0F4C5C"
+    },
+    "accent": {
+      "saffron": "#FF9933",
+      "india_green": "#138808"
+    },
+    "neutral": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "border": "#E2E8F0",
+      "text_main": "#0F172A",
+      "text_muted": "#64748B"
+    },
+    "status": {
+      "safe": "#388E3C",
+      "watch": "#FBC02D",
+      "warning": "#F57C00",
+      "critical": "#D32F2F"
+    },
+    "rationale": "The palette relies on a highly authoritative 'National Blue' for headers and typography, balanced with clean off-white backgrounds. Saffron and India Green are used sparingly for branding accents or status indicators, adhering strictly to Indian government platform aesthetics."
+  },
+  "visual_enhancers": {
+    "surfaces": "Optical Clarity rule: Dashboards and panels must use solid white backgrounds (#FFFFFF) with crisp 1px borders (border-slate-200) and no shadows or very subtle shadows (shadow-sm). Do not use glassmorphism or muddy transparent overlays for clinical/government interfaces.",
+    "motifs": "Use a subtle watermark or motif of the Ashoka Chakra (light opacity, e.g., 2% to 5%) in the hero section or sidebars to reinforce the national digital platform identity.",
+    "borders": "Sharp or slightly rounded corners (rounded-md max). Avoid overly pill-shaped containers for a more serious, structured look.",
+    "icons": "Use lucide-react with solid, readable strokes. Avoid playful or thin-line icons. Ensure high contrast."
+  },
+  "component_name": {
+    "navigation": "Government-branded Top Bar (Bilingual toggle, Emblem logo, SOS Button in red)",
+    "ticker": "Live Alerts Ticker (Red background with white text for critical, National blue for info)",
+    "dashboard_cards": "Data Cards (Statistic counters for evacuated, active shelters, rescue teams)",
+    "map_panel": "Interactive GIS Map Container (col-span-8 on desktop)",
+    "ai_panel": "Explainable AI Insights Panel (Structured list with confidence percentage bars)",
+    "tabs": "Shadcn Tabs for switching between 'Risk Heat Map', 'Rescue Routes', 'Resource Allocation'"
+  },
+  "grids": {
+    "layout_strategy": "The Bento Grid Protocol - Mode B (High Density Grid for Dashboards).",
+    "desktop": "grid-cols-12 gap-6. Map spans col-span-8 row-span-2. AI Analysis spans col-span-4 row-span-2. Bottom data tables span col-span-12.",
+    "mobile": "grid-cols-1 gap-4. Map fixed height max-h-[50vh]. Content stacks below.",
+    "spacing": "Generous inner padding for structural containers (p-6). Tight padding for dense data cells (p-3)."
+  },
+  "layouts": {
+    "app_shell": "Sticky Top Header with Gov branding. Secondary navigation bar for sub-modules (Live Map, AI Prediction, Resources, SOS).",
+    "map_overlay": "Floating control panels over the Leaflet map for Layer toggles (Rainfall, River level, Shelters), styled as opaque white cards with 1px border.",
+    "alignment": "Left-align all dense content and data. Center-align only major hero statements or empty states."
+  },
+  "motion": {
+    "style": "Minimal and functional.",
+    "interactions": "Use simple opacity or subtle background color shifts on hover. Avoid bouncy or playful animations.",
+    "loading": "Use linear progress bars or simple spinners. No complex skeleton loaders unless necessary for map tiles."
+  },
+  "accessibility": {
+    "contrast": "All text must pass WCAG AA. White text on National Blue, Red, or Saffron. Dark text on light backgrounds.",
+    "interactive": "Explicit hover and focus states (focus:ring-2 focus:ring-saffron).",
+    "testing": "All interactive elements MUST include data-testid attributes (e.g., data-testid='sos-emergency-button')."
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1690149372906-8dedeb6496ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHw0fHxmbG9vZCUyMHJlc2N1ZSUyMGJvYXR8ZW58MHx8fHwxNzg1MzMwNzE0fDA&ixlib=rb-4.1.0&q=85",
+        "category": "hero_or_module_bg",
+        "description": "Flood rescue boat operation. Use in the AI Rescue Route Planner or Volunteer section."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1722080767360-f0640ae8ce2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxzYXRlbGxpdGUlMjBtYXB8ZW58MHx8fHwxNzg1MzMwNzI3fDA&ixlib=rb-4.1.0&q=85",
+        "category": "ai_analysis_thumbnail",
+        "description": "Satellite map view. Use as a thumbnail for the AI Damage Estimation or Digital Twin section."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1661704908184-7da1eb92a4cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZpZXclMjByaXZlcnxlbnwwfHx8fDE3ODUzMzA3Mjh8MA&ixlib=rb-4.1.0&q=85",
+        "category": "drone_monitoring",
+        "description": "Drone view of a river. Use for the Drone monitoring dashboard."
+      }
+    ]
+  },
+  "libraries": {
+    "map": "leaflet, react-leaflet (Render interactive GIS maps)",
+    "charts": "recharts (For rendering water levels, rainfall data, and prediction probabilities)",
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": {
+    "1": "Initialize Tailwind config with the custom colors: nationalBlue (#0A2B4E), deepTeal (#0F4C5C), saffron (#FF9933), indiaGreen (#138808).",
+    "2": "Create a robust layout shell mimicking the 'Digital India' portal. Top bar should have the Ashoka emblem motif, bilingual toggles (mocked), and a prominent red SOS button.",
+    "3": "Implement the Live Alerts Ticker right below the header using a marquee or pure CSS animation.",
+    "4": "Integrate react-leaflet for the 'Live Flood Monitoring' dashboard. Add mocked markers for shelters, blockades, and river levels.",
+    "5": "Build the 'AI Flood Prediction' panel adjacent to the map. Use Shadcn progress bars to show confidence scores and probability metrics.",
+    "6": "Create a dense, structured data table for 'AI Resource Allocation' showing villages, required resources (boats, food), and status.",
+    "7": "Do not use transparent dropdowns or glassmorphism. Keep surfaces solid white with light borders for clarity.",
+    "8": "Use lucide-react for all iconography. Avoid generic AI emojis."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Create depth through z-index hierarchy, but use crisp borders instead of heavy shadows for this government aesthetic.",
+    "You MUST NOT center align the app container. Ensure left-alignment for dense content to match natural reading flows.",
+    "NEVER use placeholder URLs for images. Use the provided Unsplash URLs.",
+    "All interactive elements must have data-testid.",
+    "Ensure 'prefers-reduced-motion' is respected for any ticker animations."
+  ]
+}
