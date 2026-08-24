@@ -10,7 +10,12 @@ server.py did not need any edits.
 import os
 from typing import AsyncGenerator, Optional
 
-from mistralai import Mistral
+try:
+    # mistralai >= 2.0
+    from mistralai.client import Mistral
+except ImportError:
+    # mistralai < 2.0
+    from mistralai import Mistral
 
 MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY", "")
 MODEL_NAME = os.environ.get("MISTRAL_MODEL", "mistral-large-latest")
